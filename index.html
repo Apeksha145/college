@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>UNIVERSITY</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="assets/animate.css-master/animate.css" rel="stylesheet">
+		<script src="assets/js/jquery.min.js" rel="stylesheet"></script>
+		<script src="assets/js/bootstrap.js" rel="stylesheet"></script>
+		<link href="assets/css/font-awesome.css" rel="stylesheet">
+		<script>
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip(); 
+			});
+			
+			$(document).ready(function(){
+			  $(window).scroll(function() {
+				$(".slideanim").each(function(){
+				  var pos = $(this).offset().top;
+				  var winTop = $(window).scrollTop();
+					if (pos < winTop + 700) {
+					  $(this).addClass("slide");
+					}
+				});
+			  });
+			})
+		</script>
+		<style>
+			.top-bar
+			{
+			background-color: #f0ad4e;
+			border-bottom: 1px solid lightgrey;
+			line-height: 20px;
+			padding: 3px 0;
+			}
+			.social
+			{
+			text-align:right;
+			}
+			.side
+			{
+			display:inline-flex;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			}
+			.side li a
+			{
+			color:grey;
+			margin:5px;
+			font-size:15px;
+			padding: 10px;
+			}
+			.side .f:hover
+			{
+			background-color:#3b58e2;
+			}
+			.side .f a:hover
+			{
+			color:white;
+			}
+			.side .t:hover
+			{
+			background-color:dodgerblue;
+			color:white;
+			}
+			.side .t a:hover
+			{
+			color:white;
+			}
+			.side .g:hover
+			{
+			background-color:orange;
+			}
+			.side .g a:hover
+			{
+			color:white;
+			}
+			.side .l:hover
+			{
+			background-color:lightskyblue;;
+			}
+			.side .l a:hover
+			{
+			color:white;
+			}
+			.side .y:hover
+			{
+			background-color:red;
+			}
+			.side .y a:hover
+			{
+			color:white;
+			}
+			.side .p:hover
+			{
+			background-color:#271f1f;
+			}
+			.side .p a:hover
+			{
+			color:white;
+			}
+			.side .e:hover
+			{
+			background-color:#4572c3;
+			}
+			.side .e a:hover
+			{
+			color:white;
+			}
+			.side .gl:hover
+			{
+			background-color:dimgray;
+			}
+			.side .gl a:hover
+			{
+			color:white;
+			}
+			.sociall
+			{
+			text-align:left;
+			}
+			.sidel
+			{
+			display: inline-flex;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			}
+			.sidel li a
+			{
+			color:black;
+			font-weight:bold;
+			margin:5px;
+			font-size:12px;
+			padding: 5px;
+			text-decoration: none;
+			}
+			.sidel li a:hover
+			{
+			font-weight:bold;
+			color:black;
+			}
+			.navbar-brand
+			{
+			padding-top:20px;
+			padding-left:25px;
+			}
+			.navbar-default .navbar-nav li{
+			padding-top: 10px;
+			padding-right: 10px;
+			}
+			.navbar
+			{
+			border-radius:0;
+			background-color:white;
+			border: 0;
+			}
+			.affix 
+			{
+			  top: 0;
+			  width: 100%;
+			  z-index: 9999 !important;
+			}
+			.affix + .container-fluid
+			  {
+				padding-top: 70px;
+			  }
+			#main
+			 {
+				height:auto;
+				background-color:whitesmoke;
+			 }
+		/* media query start here */
+			@media only screen and (max-width: 600px)
+			{
+			.top-bar
+			{
+				display:none;
+			}
+			.navbar-brand img
+			{
+				height:20px;
+			}
+			.carousel-indicators 
+			{
+			display:none;
+			}
+			.menu-link
+			{
+			border-right:0;
+			}
+			#para{
+			padding-top:10px;
+			}
+			#vedio
+			{
+			margin-top:30px;
+			}
+			.bottom-bar 
+			{
+			display:none;
+			}
+			}
+			.carousel-control.left,.carousel-control.right
+			{
+			background-image:none
+			}
+			.carousel-indicators
+			{
+			margin-bottom: -70px;
+			}
+			.btn-lg, .btn-group-lg >.btn 
+			{
+			padding: 10px 30px;}
+			.clearfix
+			{
+			clear:both;
+			}
+			.bottom-bar
+			{
+			background-color:#f0ad4e;
+			height:30px;
+			}
+			.navbar-default .navbar-nav > li > a:hover
+			{
+			color: green;
+			font-weight:400;
+			}
+			.apply 
+			{
+			padding:10px;
+			font-size:30px;
+			}
+			.apply a
+			{
+			color:grey;
+			}
+			.pic1
+			{
+			background-image:url("assets/images/learn_1.jpg");
+			height:145px;
+			background-repeat:no-repeat;
+			background-size:cover;
+			}
+			.pic2
+			{
+			background-image:url("assets/images/learn_2.jpg");
+			height:145px;
+			background-repeat:no-repeat;
+			background-size:cover;
+			}
+			.pic3
+			{
+			background-image:url("assets/images/learn_3.jpg");
+			height:145px;
+			background-repeat:no-repeat;
+			background-size:cover;
+			}
+			.pic4
+			{
+			background-image:url("assets/images/learn_4.jpg");
+			height:145px;
+			background-repeat:no-repeat;
+			background-size:cover;
+			}
+			.captionlink
+			{
+			top:0;
+			background-color: #26679e;
+			position: relative;
+			padding: 3px ;
+			padding-left:10px;
+			height:55px;
+			}
+			.captionlink a
+			{
+			color: white;
+			text-decoration:none;
+			}
+			.footer
+			{
+			height:auto;
+			background-color:#545454;
+			}
+			.footer1
+			{
+			height:70px;
+			background-color:whitesmoke;
+			}
+			.overlay
+			{
+			padding: 40px;
+			color: #e35f30;
+			display: none;
+			text-shadow: 1px 1px black;
+			}
+			.pic1:hover .overlay
+			{
+			display:block;
+			}
+			.pic2:hover .overlay
+			{
+			display:block;
+			}
+			.pic3:hover .overlay
+			{
+			display:block;
+			}
+			.pic4:hover .overlay
+			{
+			display:block;
+			}
+			.dropdown 
+			{
+			position: relative;
+			display: inline-block;
+			}
+			.dropdown-content 
+			{
+			display: none;
+			position: absolute;
+			background-color: white;
+			min-width:300px;
+			border: 1px solid #e0e1e2;
+			box-shadow: 0 4px 10px rgba(0,0,0,.33);
+			border-radius: 2px;
+			z-index:1;
+			padding:0px 0px 0px 10px;
+			}
+			.dropdown-content li 
+			{
+			list-style-type:none;
+			}
+			.dropdown-content a
+			{
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			}
+			.dropdown-content a:hover
+			{
+			background-color: #ddd;
+			}
+			.dropdown:hover .dropdown-content
+			{
+			display: block;border-top:2px solid orange;
+			}
+			.dropdown:hover .dropbtn 
+			{
+			background-color: #3e8e41;
+			}
+			.menu-link li
+			{
+			list-style-type:none;
+			color:white;
+			text-decoration:none;
+			}
+			.menu-link li a
+			{
+			color:white;
+			text-decoration:none;
+			}
+			.menu-link li a:hover#t
+			{
+			color:dodgerblue;
+			}
+			.menu-link li a:hover#f
+			{
+			color:#3b58e2;;
+			}
+			.menu-link li a:hover#g
+			{
+			color:orange;
+			}
+			.menu-link li a:hover#y
+			{
+			color:red;
+			}
+			.list li 
+			{
+			display:inline-flex;
+			list-style-type:none;
+			float:right;
+			padding-top:10px; overflow: hidden;
+			}
+			.list li a
+			{
+			color:black;
+			}
+			.date
+			{
+			font-weight: 400;
+			font-size: 30px;
+			color: rgba(0,0,0,.7);
+			transition: color .3s;
+			padding: 5px 0;
+			border: 3px solid #dce4ea;
+			display: inline-block;
+			width: auto;
+			height: 125px;
+			text-align: center;
+			margin-right: 10px;
+			}
+			.date a
+			{
+			 text-decoration:none;
+			}
+			.menu-link
+			{
+			border-right:1px solid snow;
+			}
+			.date a:hover
+			{
+			color:green;
+			font-weight:bold;
+			}
+			.flashit
+			{
+			background-color:coral;
+			-webkit-animation: flash linear 1s infinite;
+			animation: flash linear 1s infinite;
+			}
+			@-webkit-keyframes flash 
+			{
+				0% { opacity: 1; } 
+				20% { opacity: .1; } 
+				50% { opacity: 1; }
+			}
+			@keyframes flash 
+			{
+				0% { opacity: 1; } 
+				20% { opacity: .1; } 
+				50% { opacity: 1; }
+			}
+			.flashit1
+			{
+				color:red;
+				-webkit-animation: flash linear 1s infinite;
+				animation: flash linear 1s infinite;
+			}
+			@-webkit-keyframes flash 
+			{
+				0% { opacity: 1; } 
+				50% { opacity: .1; } 
+				100% { opacity: 1; }
+			}
+			@keyframes flash 
+			{
+				0% { opacity: 1; } 
+				50% { opacity: .1; } 
+				100% { opacity: 1; }
+			}
+			.menu-link a:hover
+			{
+			color:orange;
+			}
+		  .slideanim 
+		  {visibility:hidden;}
+		  .slide 
+		  {
+		  animation-name: slide;
+		  -webkit-animation-name: slide;
+		  animation-duration: 1s;
+		  -webkit-animation-duration: 1s;
+		  visibility: visible;
+		  }
+		  @keyframes slide 
+		  {
+			0% {
+			  opacity: 0;
+			  transform: translateY(70%);
+			} 
+			100% {
+			  opacity: 1;
+			  transform: translateY(0%);
+			}
+		  }
+		  @-webkit-keyframes slide 
+		  {
+			0% {
+			  opacity: 0;
+			  -webkit-transform: translateY(70%);
+			} 
+			100% {
+			  opacity: 1;
+			  -webkit-transform: translateY(0%);
+			}
+		  }
+	</style>
+	</head>
+	<body id="myPage">
+		<div class="top-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="sociall">
+							<ul class="sidel">
+								<li><a href="#"><i class="fa fa-phone"style="color:#808080;"></i>&nbsp;&nbsp; 0126549521</a></li>
+								<li><a href="#"><i class="fa fa-envelope"style="color:#808080;"></i>&nbsp;&nbsp; info@yourdomain.com </a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="social">
+							<ul class="side">
+								<li class="f"><a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a></li>
+								<li class="t"><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li class="g"><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<li class="l"><a href="#"><span class="fa fa-linkedin"></span></a></li>
+								<li class="y"><a href="#"><span class="fa fa-youtube"></span></a></li>
+								<li class="p"><a href="#"><span class="fa fa-phone"></span></a></li>
+								<li class="e"><a href="#"><span class="fa fa-envelope-o"></span></a></li>
+								<li class="gl"><a href="#"><span class="fa fa-globe"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-default"data-spy="affix" data-offset-top="19">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			  </button>
+			  <a class="navbar-brand" href="index.html"><img src="assets/images/ulogo.png"style="width:180px;"class="img-responsive"></a>
+			</div> 
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav navbar-right">
+			   <li class=" dropdown">
+					<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" >HOME&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-content">
+					  <li><a href="vission-mission.html">Vision and Mission</a></li>
+					  <li><a href="visitors-gallery.html">Visitor's Gallery</a></li>
+					  <li><a href="ranking.html">Ranking</a></li>
+					  <li><a href="http://mcrohtak.gov.in/Acts/Notify-Service.pdf" target="_blank">Brochure</a></li>
+					</ul>
+                </li>
+				 <li class=" dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">COURSES&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-content">
+					  <li>
+						<a href="#">Courses Grid Version1</a>
+					  </li>
+					  <li>
+						<a href="#">Courses Grid Version2</a>
+					  </li>
+					  <li>
+						<a href="#">Courses List View</a>
+					  </li>
+					  <li>
+						<a href="#">Single Course</a>
+					  </li>
+					</ul>
+                </li>
+				<li class="dropdown">
+					<a href="#services"  class="dropdown-toggle" data-toggle="dropdown">ADMINISTRATION&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-content">
+					  <li><a href="index.html">Vice Chancellor</a></li>
+					  <li><a href="index-course.html">Pro Vice Chancellor</a></li>
+					  <li><a href="index-university.html">Dean of College</a></li>
+					  <li><a href="index-university.html">Treasurer</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown"href="#portfolio">ACADEMICS&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-content">
+					  <li><a href="index.html">Faculties</a></li>
+					  <li><a href="index-course.html">Departments</a></li>
+					  <li><a href="index-university.html">Centers / Institutes</a></li>
+					  <li><a href="index-university.html">Colleges</a></li>
+					  <li><a href="index-university.html">Academic Calendar</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+				<a href="#pricing"class="dropdown-toggle" data-toggle="dropdown">LIBRARIES&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-content">
+					  <li><a href="index.html">Search for Books</a></li>
+					  <li><a href="index-course.html">Search for Articles</a></li>
+					  <li><a href="index-university.html">Home University</a></li>
+					  <li><a href="index-university.html">Information Litracy</a></li>
+					</ul>
+				</li>
+				<li><a href="#contact" data-toggle="modal" data-target="#myModal"class="flashit"style="background-color:#f79f53cf;font-weight:bold;color: forestgreen;height: 45px;">LOGIN&nbsp;</a></li>
+				<li>
+				<a href="#" data-toggle="collapse" data-target="#demo">
+				<i class="glyphicon glyphicon-search"></i></a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</nav> 
+		<div class="container">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+				<div id="demo" class="collapse">
+				<form class="form"action="#"method="POST">
+					<input type="text"placeholder="Search Here What You Want...................."class="form-control"style="margin-bottom: 20px;">
+				</form>
+				</div>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+		<br>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content"style="margin-top:115px;">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-warning btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member ? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+		</div>
+		</div>
+	</div> 
+	<!-- Modal end -->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators" style="display:none;">
+			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			  <li data-target="#myCarousel" data-slide-to="1"></li>
+			  <li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+			  <div class="item active"style="background-image:url('assets/images/slide-1.jpg');height:400px;background-repeat:no-repeat;background-size:cover;">
+					<div class="container">
+						<div class="row"style="margin-top:150px;">
+							<div class="col-sm-5">
+								<div class="animated bounceInUp"style="background-color:#b0e0e68a;padding:10px 20px 25px 20px;">
+									<h3 style="background-color:goldenrod;color:white;width:fit-content;padding:5px;">FIND YOUR DREAM COURSE</h3>
+									<h6 style="font-weight:bold;">Loem ipsum For a complete reference of all carousel options, methods<br> and eventsgo to our Bootstrap JS Carousel Reference.</h6>
+									<button type="button" style="border:0;">Read more..</button>&nbsp;
+									<button type="button" style="background-color:black;color:white;border:0;width:160px">FIND US</button>
+								</div>
+							</div>
+							<div class="col-sm-7"></div>
+						</div>
+					</div>
+				</div>
+			   <div class="item"style="background-image:url('assets/images/slide-2.jpg');height:400px;background-repeat:no-repeat;background-size:cover;">
+					<div class="container">
+						<div class="row"style="margin-top:150px;">
+							<div class="col-sm-5">
+								<div class="animated bounceInUp"style="background-color:#ffffff99;padding:10px 20px 25px 20px;">
+									<h3 style="background-color:goldenrod;color:white;width:fit-content;padding:5px;">WELCOME TO COLLEGE</h3>
+									<h6 style="font-weight:bold;">Loem ipsum For a complete reference of all carousel options, methods<br> and eventsgo to our Bootstrap JS Carousel Reference.</h6>
+									<button type="button" style="border:0;">Read more..</button>&nbsp;
+									<button type="button" style="background-color:black;color:white;border:0;width:160px">CONTACT US</button>
+								</div>
+							</div>
+							<div class="col-sm-7"></div>
+						</div>
+					</div>
+				</div>
+				 <div class="item"style="background-image:url('assets/images/slide-3.jpg');height:400px;background-repeat:no-repeat;background-size:cover;">
+					<div class="container">
+						<div class="row"style="margin-top:150px;">
+							<div class="col-sm-5">
+								<div class="animated bounceInUp"style="background-color:#a9a9a9bd;padding:10px 20px 25px 20px;">
+									<h3 style="background-color:goldenrod;color:white;width:fit-content;padding:5px;">ADMISSION GOING ON</h3>
+									<h6 style="font-weight:bold;">Loem ipsum For a complete reference of all carousel options, methods<br> and eventsgo to our Bootstrap JS Carousel Reference.</h6>
+									<button type="button" style="border:0;">Read more..</button>&nbsp;
+									<button type="button" style="background-color:black;color:white;border:0;width:160px">APPLY NOW</button>
+								</div>
+							</div>
+							<div class="col-sm-7"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			  <span class="glyphicon glyphicon-chevron-left"></span>
+			  <span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			  <span class="glyphicon glyphicon-chevron-right"></span>
+			  <span class="sr-only">Next</span>
+			</a>
+	    </div>
+		<div class="container-fluid">
+			<div class="row "style="padding: 0px 0 25px;background: linear-gradient(to right,#222c34 0%,#2a3a46 100%);height:auto;">
+				<div class="container">
+					<div class="col-sm-12">
+					<h3 style="color:white;text-align:center;padding-bottom:5px;font-weight:bold;">OUR POPULAR COURSES</h3>
+						<div class="row ">
+							<div class="col-sm-3"style="padding-top:15px;">
+								<div class="pic1">
+									<div class="overlay">
+										<p>LPU provided me the best platform to groom myself academically as well as personally.</p>
+									</div>
+								</div>
+								<div class="captionlink">
+									<a href="#">
+										<h4>ENGLISH LITERATURE
+										<span class="glyphicon glyphicon-chevron-right"style="float:right;"></span>
+										</h4>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-3"style="padding-top:15px;">
+								<div class="pic2">
+									<div class="overlay">
+									<p>LPU provided me the best platform to groom myself academically as well as personally.</p>
+									</div>
+								</div>
+								<div class="captionlink">
+									<a href="#"><h4>BUSSINESS SCIENCE
+									<span class="glyphicon glyphicon-chevron-right"style="float:right;"></span></h4></a>
+								</div>
+							</div>
+							<div class="col-sm-3"style="padding-top:15px;">
+								<div class="pic3">
+									<div class="overlay">
+										<p>LPU provided me the best platform to groom myself academically as well as personally.</p>
+									</div>
+								</div>
+								<div class="captionlink">
+									<a href="#">
+									<h4>
+									 COMPUTER SCIENCE
+									 <span class="glyphicon glyphicon-chevron-right"style="float:right;"></span>
+									</h4>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-3"style="padding-top:15px;">
+								<div class="pic4">
+									<div class="overlay">
+									<p>LPU provided me the best platform to groom myself academically as well as personally.</p>
+									</div>
+								</div>
+								<div class="captionlink">
+									<a href="#"><h4>MATHEMATICS
+									<span class="glyphicon glyphicon-chevron-right"style="float:right;"></span></h4></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row " id="main">
+				<div class="col-sm-12 ">
+					<div class="container">
+						<div class="row"style="height:50px;">
+							<div class="col-sm-12">
+							</div>
+						</div>
+						<div class="row"style="height:150px; background-color:white;text-align:center;box-shadow: 0 0 20px #ccc;overflow:hidden;">
+							<div class="col-sm-12">
+									<div id="myCarousel" class="carousel slide" data-ride="carousel">
+									<!-- Indicators -->
+									<ol class="carousel-indicators">
+									  <li data-target="#myCarousel" data-slide-to="0" class="active"style="background-color:#f7f4f487;"></li>
+									  <li data-target="#myCarousel" data-slide-to="1"style="background-color:#c7c0c087;"></li>
+									  <li data-target="#myCarousel" data-slide-to="2"style="background-color:#c7c0c087;"></li>
+									  <li data-target="#myCarousel" data-slide-to="3"style="background-color:#c7c0c087;"></li>
+									  <li data-target="#myCarousel" data-slide-to="4"style="background-color:#c7c0c087;"></li>
+									  <li data-target="#myCarousel" data-slide-to="5"style="background-color:#c7c0c087;"></li>
+									  <li data-target="#myCarousel" data-slide-to="6"style="background-color:#c7c0c087;"></li>
+									</ol>
+									<!-- Wrapper for slides -->
+									<div class="carousel-inner">
+									  <div class="item active">
+										<div class="container">
+										  <div class="row">
+											<div class="co-sm-12">
+											  <h2 style="color:orange;"><span class="fa fa-university"style="color:black;"></span>&nbsp;WELCOME TO OUR COLLEGE&nbsp;<span class="fa fa-university"style="color:black;"></span></h2>
+											  <p>LA is always so much fun!</p>
+											</div>
+										  </div>
+										</div>
+									  </div>
+									  <div class="item">
+										<div class="container">
+										  <div class="row">
+											<div class="co-sm-12">
+											  <h2>30K <label style="color:orange;">STUDENTS</label> FROM 29 STATES & 70 COUNTRIES!</h2>
+											  <p>LA is always so much fun!</p>
+											</div>
+										  </div>
+										</div>
+									  </div>
+									  <div class="item">
+										<div class="container">
+										  <div class="row">
+											<div class="co-sm-12">
+												<p style="padding-top:20px;font-weight:bold;">a Campus</p>
+											   <h2 style="color:orange;">To Fall in LOVE with <span class="fa fa-thumbs-o-up"style="color:black;"></span></h2>
+											</div>
+										  </div>
+										</div>
+									  </div>						  
+									</div>
+									<!-- Left and right controls -->
+									<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+									  <span class="glyphicon glyphicon-chevron-left"style="display:none;"></span>
+									  <span class="sr-only">Previous</span>
+									</a>
+									<a class="right carousel-control" href="#myCarousel" data-slide="next">
+									  <span class="glyphicon glyphicon-chevron-right" style="display:none;"></span>
+									  <span class="sr-only">Next</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row slideanim"style="height:auto;background-color:white;padding:50px;box-shadow: 0 0 20px #ccc;">
+							<div class="col-sm-4">
+								<img src="assets/images/about.png" class="media-object" style="width:100%;height:auto;">
+							</div>
+							  <div class="col-sm-8">
+								<h4 style="font-weight:bold;padding-left:10px;padding-top:10px;">ABOUT</h4>
+								<p style="text-align:justify;font-size:17px;padding:10px;">The University of Delhi is the premier university of the country and is known for its high standards in teaching and research and attracts eminent scholars to its faculty. It was established in 1922 as a unitary, teaching and residential university by an Act of the then Central Legislative Assembly. The President of India is the Visitor, the Vice President is the Chancellor and the Chief Justice of the Supreme Court of India is the Pro-Chancellor of the University.</p>
+								   <div id="dem" class="collapse"style="text-align:justify;font-size:17px;padding:10px;">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat,Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								  </div>
+								  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#dem"style="float:right;background-color:#26679e;">Read More..</button>
+							  </div>
+						</div>
+						<div class="row"style="height:150px;text-align:center;padding-top: 25px;">
+							<div class="col-sm-12">
+								<h2><strong>RECENT NEWS!</strong></h2>
+								<h4 style="color:#000000a3;">LPU strikes deals with Google, SAP, Oracle etc to offer free industry training to students!</h4>
+							</div>
+						</div>
+						<div class="row  slideanim"style="text-align:center;">
+							<div class="col-sm-4">
+								<div style="height:auto;background-color:white;box-shadow: 0 0 20px #ccc;">
+									<img src="assets/images/course-img2.jpg"  style="width:100%;height:auto;">
+									<h3>Heading</h3>
+									<p style="text-align:justify;font-size:17px;padding:0px 45px 45px 45px;">The University of Delhi is the premier university eminent scholars to its faculty. It was established in 1922 as a unitary, teaching and residential university by an Act of the then Central Legislative Assembly. The President of India is the Visitor, the Vice President is the Chancellor and the Chief Justice of the Supreme Court of India is the Pro-Chancellor of the University.</p>
+								</div><br>
+							</div>
+							<div class="col-sm-4">
+								<div style="height:auto;background-color:white;box-shadow: 0 0 20px #ccc;">
+									<img src="assets/images/related_thumb_02.jpg"  style="width:100%;height:auto;">
+									<h3>Heading</h3>
+									<p style="text-align:justify;font-size:17px;padding:0px 45px 45px 45px;">The University of Delhi is the premier university eminent scholars to its faculty. It was established in 1922 as a unitary, teaching and residential university by an Act of the then Central Legislative Assembly. The President of India is the Visitor, the Vice President is the Chancellor and the Chief Justice of the Supreme Court of India is the Pro-Chancellor of the University.</p>
+								</div><br>
+							</div>
+							<div class="col-sm-4">
+								<div style="height:auto;background-color:white;box-shadow: 0 0 20px #ccc;">
+								<img src="assets/images/course-img1.jpg"  style="width:100%;height:auto;">
+									<h3>Heading</h3>
+									<p style="text-align:justify;font-size:17px;padding:0px 45px 45px 45px;">The University of Delhi is the premier university eminent scholars to its faculty. It was established in 1922 as a unitary, teaching and residential university by an Act of the then Central Legislative Assembly. The President of India is the Visitor, the Vice President is the Chancellor and the Chief Justice of the Supreme Court of India is the Pro-Chancellor of the University.</p>
+								</div><br>
+							</div>
+						</div>
+						<div class="row slideanim"style="padding-top:10px;">
+							<div class="col-sm-8">
+								<div style="height:auto;background-color:white;box-shadow: 0 0 20px #ccc;padding:20px;border-left:3px solid green;">
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="row">
+												<h4><strong>&nbsp;&nbsp;&nbsp;UPCOMING EVENTS</strong></h4>
+												<hr>
+												<div class="col-sm-3">
+													<span class="date animated flash">
+														<a href="#"class="flashit1"><span>24</span>
+														January</a>
+													</span>
+												</div>
+												<div class="col-sm-9">
+													<p id="para"style="text-align:justify;font-size:20px;color:dimgray;">Offered in small class sizes with great emphasis...</p><br>
+													<div class="row">
+														<div class="col-sm-6">
+															<a href="#" style="text-decoration:none;color:black;"><span class="fa fa-map-marker fa-2x"style="color: #69696994;"></span>&nbsp;&nbsp;Main Campus</a>
+														</div>
+														<div class="col-sm-6">
+															<span class="fa fa-clock-o fa-2x"style="color:#69696994;"></span>&nbsp;&nbsp;11:30pm
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr>
+											<div class="row">
+												<div class="col-sm-3">
+													<span class="date ">
+														<a href="#"class="flashit1"><span>28</span>
+														January</a>
+													</span>
+												</div>
+												<div class="col-sm-9">
+													<p id="para"style="text-align:justify;font-size:20px;color:dimgray;">Offered in small class sizes with great emphasis...</p><br>
+													<div class="row">
+														<div class="col-sm-6">
+															<a href="#" style="text-decoration:none;color:black;"><span class="fa fa-map-marker fa-2x"style="color: #69696994;"></span>&nbsp;&nbsp;Main Campus</a>
+														</div>
+														<div class="col-sm-6">
+															<span class="fa fa-clock-o fa-2x"style="color: #69696994;"></span>&nbsp;&nbsp;11:30pm
+														</div>
+													</div>
+												</div>
+											</div><hr>
+											<div class="row">
+												<div class="col-sm-3">
+													<span class="date animated flash">
+														<a href="#"class="flashit1"><span>30</span>
+														January</a>
+													</span>
+												</div>
+												<div class="col-sm-9">
+													<p id="para"style="text-align:justify;font-size:20px;color:dimgray;">Offered in small class sizes with great emphasis...</p><br>
+													<div class="row">
+														<div class="col-sm-6">
+															<a href="#" style="text-decoration:none;color:black;"><span class="fa fa-map-marker fa-2x"style="color: #69696994;"></span>&nbsp;&nbsp;Main Campus</a>
+														</div>
+														<div class="col-sm-6">
+															<span class="fa fa-clock-o fa-2x"style="color: #69696994;"></span>&nbsp;&nbsp;11:30pm
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div id="vedio"style="height:566px;background-color:white;box-shadow: 0 0 20px #ccc;text-align:center;">
+									<video style="max-width:100%;height:auto;padding-top:20px;"controls>
+									  <source src="assets/images/mov_bbb.mp4" type="video/mp4">
+									  <source src="assets/images/mov_bbb.ogg" type="video/ogg">
+									  <source src="assets/images/mov_bbb.wof" type="video/wof">
+									  Your browser does not support HTML5 video.
+									</video>
+									<h3>Heading</h3>
+									<p style="text-align:justify;font-size:17px;padding:0px 43px 43px 44px;">The University of Delhi The President of India is the Visitor, the Vice President is the Chancellor and the Chief Justice of the Supreme Court of India is the Pro-Chancellor of the University.</p>
+								</div>
+							</div>
+						</div>
+						<div class="row"style="height:50px;text-align:center;">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="row ">
+					<div style="padding:50px 0px 0px;">
+						<div class="col-sm-3">
+							<div style="padding-bottom:30px;line-height:2;">
+							<ul class="menu-link">
+								<li><a href="#">ABOUT ROYAL COLLEGE</a></li>
+								<li><a href="#">ABOUT CAMPUS</a></li>
+								<li><a href="#">STAFF MEMBERS</a></li>
+								<li><a href="#">WHY CHOOSE US?</a></li>
+							</ul>
+							</div>
+						</div>
+						<div class="col-sm-3 ">
+						<div style="padding-bottom:30px;line-height:2;">
+							<ul class="menu-link">
+								<li><a href="#">ALL COURSES</a></li>
+								<li><a href="#">ADMISSION</a></li>
+								<li><a href="#">PHOTO GALLERY</a></li>
+								<li><a href="#"> STUDENTS</a></li>
+							</ul>
+						</div>
+						</div>
+						<div class="col-sm-3 ">
+						<div style="padding-bottom:30px;line-height:2;">
+							<ul class="menu-link">
+								<li style="font-weight:bold;">LOCATION :</li>
+								<li>Royal College 1727 kundanhalli</li>
+								<li>Bangalore, Karnataka</li>
+								<li><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;Main Campus</li>
+							</ul>
+						</div>
+						</div>
+						<div class="col-sm-3 ">
+						<div style="padding-bottom:30px;line-height:2;">
+							<ul class="menu-link"style="border-right:0;">
+								<li style="font-weight:bold;">FIND US ON :</li>
+								<li>
+									<a href="#" id="t"><i class="fa fa-twitter"></i></a>
+									<a href="#"id="f">&nbsp;&nbsp;<i class="fa fa-facebook"></i></a>
+									<a href="#"id="g">&nbsp;&nbsp;<i class="fa fa-google-plus"></i></a>
+									<a href="#"id="y">&nbsp;&nbsp;<i class="fa fa-youtube"></i></a>
+								</li>
+								<li  style="font-weight:bold;">CALL US ON :</li>
+								<li>012-3434-456768</li>
+							</ul>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<p style="padding-top:10px;">© 2016 Copyright Royal College</p>
+					</div>
+					<div class="col-sm-6">
+						<ul class="list">
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">&nbsp;|&nbsp;</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-bar navbar-fixed-bottom">
+			<div class="row">
+				<div class="col-sm-4 ">
+					<a href="#"data-toggle="modal"data-target="#comment"><span  title="Comments..." data-toggle="tooltip"class="fa fa-comments"style="float:left;font-size:25px;color:#000000c2;padding-left:20px;"></span></a>
+				</div>
+				<div class="col-sm-4 text-center">
+					<p style="font-size:13px;padding-top:10px;">Website designed by <a href="http://ethical.in/"title="EWS" data-toggle="tooltip">www.ethical.in</a></p>
+				</div>
+				<div class="col-sm-4 ">
+					<a href="#myPage" title="To Top" data-toggle="tooltip" style="float:right;">
+						<span class="glyphicon glyphicon-chevron-up"style="font-size:25px;color:#000000c2;padding-right:20px;"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	<!-- Modal -->
+	<div class="modal fade" id="comment" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content"style="margin-top:115px;">
+			<div class="modal-header" style="padding:35px 50px;">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h3><span class="fa fa-comments fa-2x"></span>&nbsp;Comments</h3>
+			</div>
+			<div class="modal-body" style="padding:40px 50px;">
+			<div class="media">
+				<div class="media-left">
+				  <img src="assets/images/about.png" class="media-object img-circle"   style="width:90px">
+				</div>
+				<div class="media-body">
+				  <h4 class="media-heading">RAYA</h4>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			 </div>
+			<hr>
+			<div class="media">
+				<div class="media-left">
+				  <img src="assets/images/course-img1.jpg" class="media-object img-circle"   style="width:90px">
+				</div>
+				<div class="media-body">
+				  <h4 class="media-heading">ALISHA</h4>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			 </div>
+			 <hr>
+			 <div class="media">
+				<div class="media-left">
+				  <img src="assets/images/about.png" class="media-object img-circle"   style="width:90px">
+				</div>
+				<div class="media-body">
+				  <h4 class="media-heading">SHIVAY</h4>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			 </div>
+			<hr>
+			</div>
+			<div class="modal-footer">
+			  <button type="submit" class="btn btn-warning btn-default" data-dismiss="modal">Cancel</button>
+			</div>
+			</div>
+		</div>
+	</div> 
+	<!-- Modal end -->
+	</body>
+</html>
