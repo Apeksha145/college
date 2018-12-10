@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>UNIVERSITY </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="assets/animate.css-master/animate.css" rel="stylesheet">
+		<script src="assets/js/jquery.min.js" rel="stylesheet"></script>
+		<script src="assets/js/bootstrap.js" rel="stylesheet"></script>
+		<link href="assets/css/font-awesome.css" rel="stylesheet">
+		<script>
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip(); 
+			});
+		</script>
+		<style>
+			.top-bar
+			{
+			background-color: #f0ad4e;
+			border-bottom: 1px solid lightgrey;
+			line-height: 20px;
+			padding: 3px 0;
+			}
+			.social
+			{
+			text-align:right;
+			}
+			.side
+			{
+			display: inline-flex;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			}
+			.side li a
+			{
+			color:grey;
+			margin:5px;
+			font-size:15px;
+			padding: 10px;
+			}
+			.side .f:hover
+			{
+			background-color:#3b58e2;
+			}
+			.side .f a:hover
+			{
+			color:white;
+			}
+			.side .t:hover
+			{
+			background-color:dodgerblue;
+			color:white;
+			}
+			.side .t a:hover
+			{
+			color:white;
+			}
+			.side .g:hover
+			{
+			background-color:orange;
+			}
+			.side .g a:hover
+			{
+			color:white;
+			}
+			.side .l:hover
+			{
+			background-color:lightskyblue;;
+			}
+			.side .l a:hover
+			{
+			color:white;
+			}
+			.side .y:hover
+			{
+			background-color:red;
+			}
+			.side .y a:hover
+			{
+			color:white;
+			}
+			.side .p:hover
+			{
+			background-color:#271f1f;
+			}
+			.side .p a:hover
+			{
+			color:white;
+			}
+			.side .e:hover
+			{
+			background-color:#4572c3;
+			}
+			.side .e a:hover
+			{
+			color:white;
+			}
+			.side .gl:hover
+			{
+			background-color:dimgray;
+			}
+			.side .gl a:hover
+			{
+			color:white;
+			}
+			.sociall
+			{
+			text-align:left;
+			}
+			.sidel
+			{
+			display: inline-flex;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			}
+			.sidel li a
+			{
+			color:black;
+			font-weight:bold;
+			margin:5px;
+			font-size:12px;
+			padding: 5px;
+			text-decoration: none;
+			}
+			.sidel li a:hover
+			{
+			font-weight:bold;
+			color:black;
+			}
+			.navbar-brand
+			{
+			padding-top:20px;
+			padding-left:25px;
+			}
+			.navbar-default .navbar-nav li{
+			padding-top: 10px;
+			padding-right: 10px;
+			}
+			.navbar
+			{
+			border-radius:0;
+			background-color:white;
+			border: 0;
+			}
+			.affix 
+			{
+			  top: 0;
+			  width: 100%;
+			  z-index: 9999 !important;
+			}
+			.affix + .container-fluid
+			  {
+				  padding-top: 70px;
+			  }
+			#main
+			 {
+				height:auto;
+				background-color:whitesmoke;
+			 }
+		/* media query start here */
+			@media only screen and (max-width: 600px)
+			{
+			.top-bar
+			{
+				display:none;
+			}
+			.navbar-brand img
+			{
+				height:20px;
+			}
+			.carousel-indicators
+			{
+			display:none;
+			}
+			.bottom-bar 
+			{
+			display:none;
+			}
+			}
+			.carousel-control.left,.carousel-control.right
+			{
+				background-image:none
+			}
+			.carousel-indicators
+			{
+				margin-bottom: -70px;
+			}
+			.btn-lg, .btn-group-lg > .btn {
+			padding: 10px 30px;}
+			.clearfix
+			{
+			clear:both;
+			}
+			.bottom-bar
+			{
+			background-color:#f0ad4e;
+			height:30px;
+			}
+			.navbar-default .navbar-nav > li > a:hover
+			{
+			color: green;
+			font-weight:400;
+			}
+			.footer
+			{
+			height:auto;
+			background-color:#545454;
+			}
+			.footer1
+			{
+			height:70px;
+			background-color:whitesmoke;
+			}
+		.dropdown 
+		{
+		position: relative;
+		display: inline-block;
+		}
+		.dropdown-content 
+		{
+		display: none;
+		position: absolute;
+		background-color: white;
+		min-width:300px;
+		border: 1px solid #e0e1e2;
+		box-shadow: 0 4px 10px rgba(0,0,0,.33);
+		border-radius: 2px;
+		z-index: 1;
+		padding:0px 0px 0px 10px;
+		}
+		.dropdown-content li 
+		{
+		list-style-type:none;
+		}
+		.dropdown-content a
+		{
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		}
+		.dropdown-content a:hover
+		{
+		background-color: #ddd;
+		}
+		.dropdown:hover .dropdown-content
+		{
+		display: block;border-top:2px solid orange;
+		}
+		.dropdown:hover .dropbtn 
+		{
+		background-color: #3e8e41;
+		}
+		.menu-link li
+		{
+		list-style-type:none;
+		color:white;
+		}
+		.menu-link li a{
+		color:white;
+		text-decoration:none;
+		}
+		.menu-link a:hover
+		{
+		color:orange;
+		}
+		.menu-link li a:hover#t{
+		color:dodgerblue;
+		}
+		.menu-link li a:hover#f{
+		color:#3b58e2;;
+		}
+		.menu-link li a:hover#g{
+		color:orange;
+		}
+		.menu-link li a:hover#y{
+		color:red;
+		}
+		.list li 
+		{
+		display:inline-flex;
+		list-style-type:none;
+		float:right;
+		padding-top:10px; overflow: hidden;
+		}
+		.list li a
+		{
+		color:black;
+		}
+		.menu-wrap
+		{
+		background-color:#26679e;
+		height:70px;color: white;
+		}
+		.menu-wrap-in
+		{
+		padding-left: 30px;
+		}
+		.menu-cont
+		{
+		height:auto;
+		background-image:url("assets/images/lit.jpg");
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:center;
+		padding-bottom:40px;
+		padding-top:40px;
+		}
+		.fa-stack{
+		color:#ffa500a1;
+		}
+		.flashit
+		{
+			-webkit-animation: flash linear 1s infinite;
+			animation: flash linear 1s infinite;
+		}
+		@-webkit-keyframes flash 
+		{
+			0% { opacity: 1; } 
+			20% { opacity: .1; } 
+			50% { opacity: 1; }
+		}
+		@keyframes flash 
+		{
+			0% { opacity: 1; } 
+			20% { opacity: .1; } 
+			50% { opacity: 1; }
+		}
+	</style>
+	</head>
+	<body  id="myPage">
+		<div class="top-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="sociall">
+							<ul class="sidel">
+								<li><a href="#"><i class="fa fa-phone"style="color:#808080;"></i>&nbsp;&nbsp; 0126549521</a></li>
+								<li><a href="#"><i class="fa fa-envelope"style="color:#808080;"></i>&nbsp;&nbsp; info@yourdomain.com </a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="social">
+							<ul class="side">
+								<li class="f"><a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a></li>
+								<li class="t"><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li class="g"><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<li class="l"><a href="#"><span class="fa fa-linkedin"></span></a></li>
+								<li class="y"><a href="#"><span class="fa fa-youtube"></span></a></li>
+								<li class="p"><a href="#"><span class="fa fa-phone"></span></a></li>
+								<li class="e"><a href="#"><span class="fa fa-envelope-o"></span></a></li>
+								<li class="gl"><a href="#"><span class="fa fa-globe"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-default "data-spy="affix" data-offset-top="19">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"onclick="myFunction(this)">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			  </button>
+			  <a class="navbar-brand" href="index.html"><img src="assets/images/ulogo.png"style="width:180px;"class="img-responsive"></a>
+			</div> 
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav navbar-right">
+			   <li class=" dropdown">
+					<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" >HOME&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-content">
+					  <li><a href="vission-mission.html">Vision and Mission</a></li>
+					  <li><a href="visitors-gallery.html">Visitor's Gallery</a></li>
+					  <li><a href="ranking.html">Ranking</a></li>
+					  <li><a href="http://mcrohtak.gov.in/Acts/Notify-Service.pdf" target="_blank">Brochure</a></li>
+					</ul>
+                </li>
+				<li class=" dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">COURSES&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-content">
+					  <li>
+						<a href="#">Courses Grid Version1</a>
+					  </li>
+					  <li>
+						<a href="#">Courses Grid Version2</a>
+					  </li>
+					  <li>
+						<a href="#">Courses List View</a>
+					  </li>
+					  <li>
+						<a href="#">Single Course</a>
+					  </li>
+					</ul>
+                </li>
+				<li class="dropdown">
+					<a href="#services"  class="dropdown-toggle" data-toggle="dropdown">ADMINISTRATION&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-content">
+					  <li><a href="index.html">Vice Chancellor</a></li>
+					  <li><a href="index-course.html">Pro Vice Chancellor</a></li>
+					  <li><a href="index-university.html">Dean of College</a></li>
+					  <li><a href="index-university.html">Treasurer</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown"href="#portfolio">ACADEMICS&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-content">
+					  <li><a href="index.html">Faculties</a></li>
+					  <li><a href="index-course.html">Departments</a></li>
+					  <li><a href="index-university.html">Centers / Institutes</a></li>
+					  <li><a href="index-university.html">Colleges</a></li>
+					  <li><a href="index-university.html">Academic Calendar</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a href="#pricing"class="dropdown-toggle" data-toggle="dropdown">LIBRARIES&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-content">
+					  <li><a href="index.html">Search for BSooks</a></li>
+					  <li><a href="index-course.html">Search for Articles</a></li>
+					  <li><a href="index-university.html">Home University</a></li>
+					  <li><a href="index-university.html">Information Litracy</a></li>
+					</ul>
+				</li>
+				<li><a href="#contact" data-toggle="modal" data-target="#myModal"class="flashit"style="background-color:#f79f53cf;font-weight:bold;color: forestgreen;height: 45px;">LOGIN&nbsp;</a></li>
+				<li>
+				<a href="#" data-toggle="collapse" data-target="#demo">
+				<i class="glyphicon glyphicon-search"></i></a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</nav> 
+		<div class="container">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-10">
+				<div id="demo" class="collapse">
+				<form class="form"action="#"method="POST">
+					<input type="text"placeholder="Search Here What You Want...................."class="form-control"style="margin-bottom: 20px;">
+				</form>
+				</div>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+		<br>
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content"style="margin-top:115px;">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 ><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-warning btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member ? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+		</div>
+		</div>
+	</div> 
+	<!-- Modal end -->
+	<div class="menu-wrap"data-spy="affix" data-offset-top="20">
+		<div class="container">
+			<div class="row">
+				<div class="menu-wrap-in">
+					<h3>Vission & Mission</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu-cont">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div style="height:850px;background-color:white;box-shadow: 0 0 20px #ccc;text-align:center;padding-top:30px;">
+						<img src="assets/images/vision-img.jpg"  style="width:80%;height:auto;opacity:0.8;"class="img-circle animated bounceIn">
+						<h3 align="center"style="padding-top:15px;"class="animated lightSpeedIn"><strong>VISSION</strong></h3>
+						<p style="text-align:justify;font-size:17px;padding:5px 45px 45px 45px;line-height: 34px!important;">
+						To be a premier academic institution, recognized internationally for its contribution to 
+						industry and society through excellence in teaching, 
+						learning, research, internationalization, entrepreneurship and leadership.</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div style="height:850px;background-color:white;box-shadow: 0 0 20px #ccc;text-align:center;padding-top:30px;">
+						<img src="assets/images/mission-img.jpg"  style="width:80%;height:auto;opacity:0.8;"class="img-circle animated bounceIn">
+						<h3 align="center"style="padding-top:15px;"class="animated lightSpeedIn"><strong>MISSION</strong></h3>
+						<div style="padding:5px 45px 45px 45px;font-size:17px;letter-spacing: 1px;line-height: 32px!important;">	
+							<ul>
+								<li>To transform education through academic rigour, 
+								practical orientation and outcome based teaching.</li>
+								<li>To transform education through academic rigour, 
+								practical orientation and outcome based teaching.</li>
+								<li>To transform education through academic rigour, 
+								practical orientation and outcome based teaching.</li>
+								<li>To transform education through academic rigour, 
+								practical orientation and outcome based teaching.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div><br>
+			<div class="row">
+				<div class="col-sm-12">
+					<div style="height:auto;background-color:white;box-shadow: 0 0 20px #ccc;text-align:center;padding-top:10px;padding-bottom:20px;">
+						<h2  class="animated bounce">CORE VALUES</h2>
+						<div class="row"style="padding-top:20px;">
+							<div class="col-sm-4">
+								<span class="fa-stack fa-3x">
+									<i class="fa fa-circle-thin fa-stack-2x"></i>
+									<i class="fa fa-graduation-cap fa-stack-1x"></i>
+								</span>Pursuit of Excellence
+							</div>
+							<div class="col-sm-4">
+								<span class="fa-stack fa-3x">
+									<i class="fa fa-circle-thin fa-stack-2x"></i>
+									<i class="fa fa-balance-scale fa-stack-1x"></i>
+								</span>Freedom of thought and expression</div>
+							<div class="col-sm-4">
+								<span class="fa-stack fa-3x">
+									<i class="fa fa-circle-thin fa-stack-2x"></i>
+									<i class="fa fa-commenting fa-stack-1x"></i>
+								</span>Integrity and Professional ethics</div>
+						</div>
+						<div class="row"style="padding-top:20px;">
+							<div class="col-sm-4">
+								<span class="fa-stack fa-3x">
+									<i class="fa fa-circle-thin fa-stack-2x"></i>
+									<i class="fa fa-handshake-o fa-stack-1x"></i>
+								</span>Respect for diversity
+							</div>
+							<div class="col-sm-4">
+								<span class="fa-stack fa-3x">
+									<i class="fa fa-circle-thin fa-stack-2x"></i>
+									<i class="fa fa-file-text fa-stack-1x"></i>
+								</span>Accountability for actions and results
+							</div>
+							<div class="col-sm-4">
+								<span class="fa-stack fa-3x">
+									<i class="fa fa-circle-thin fa-stack-2x"></i>
+									<i class="fa fa-pie-chart fa-stack-1x"></i>
+								</span>fa-twitter on fa-circle-thin circle
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div style="padding:50px 0px 0px;">
+					<div class="col-sm-3">
+						<div style="padding-bottom:30px;line-height:2;">
+						<ul class="menu-link"style="border-right:1px solid snow;">
+							<li><a href="#">ABOUT ROYAL COLLEGE</a></li>
+							<li><a href="#">ABOUT CAMPUS</a></li>
+							<li><a href="#">STAFF MEMBERS</a></li>
+							<li><a href="#">WHY CHOOSE US?</a></li>
+						</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 ">
+						<div style="padding-bottom:30px;line-height:2;">
+							<ul class="menu-link"style="border-right:1px solid snow;">
+								<li><a href="#">ALL COURSES</a></li>
+								<li><a href="#">ADMISSION</a></li>
+								<li><a href="#">PHOTO GALLERY</a></li>
+								<li><a href="#"> STUDENTS</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 ">
+						<div style="padding-bottom:30px;line-height:2;">
+							<ul class="menu-link"style="border-right:1px solid snow;">
+								<li style="font-weight:bold;">LOCATION :</li>
+								<li>Royal College 1727 kundanhalli</li>
+								<li>Bangalore, Karnataka</li>
+								<li><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;Main Campus</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 ">
+						<div style="padding-bottom:30px;line-height:2;">
+							<ul class="menu-link">
+								<li style="font-weight:bold;">FIND US ON :</li>
+								<li>
+									<a href="#"id="t"><i class="fa fa-twitter"></i></a>
+									<a href="#"id="f">&nbsp;&nbsp;<i class="fa fa-facebook"></i></a>
+									<a href="#"id="g">&nbsp;&nbsp;<i class="fa fa-google-plus"></i></a>
+									<a href="#"id="y">&nbsp;&nbsp;<i class="fa fa-youtube"></i></a>
+								</li>
+								<li  style="font-weight:bold;">CALL US ON :</li>
+								<li>012-3434-456768</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer1">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<p style="padding-top:10px;">© 2016 Copyright Royal College</p>
+				</div>
+				<div class="col-sm-6">
+					<ul class="list">
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">&nbsp;|&nbsp;</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-bar navbar-fixed-bottom">
+		<div class="row">
+			<div class="col-sm-4 ">
+				<a href="#"data-toggle="modal"data-target="#comment"><span  title="Comments..." data-toggle="tooltip"class="fa fa-comments"style="float:left;font-size:25px;color:#000000c2;padding-left:20px;"></span></a>
+			</div>
+			<div class="col-sm-4 text-center">
+				<p style="font-size:13px;padding-top:10px;">Website designed by <a href="http://ethical.in/"title="EWS" data-toggle="tooltip">www.ethical.in</a></p>
+			</div>
+			<div class="col-sm-4 ">
+				<a href="#myPage" title="To Top" data-toggle="tooltip"style="float:right;">
+					<span class="glyphicon glyphicon-chevron-up"style="font-size:25px;color:#000000c2;padding-right:20px;"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="comment" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content"style="margin-top:115px;">
+			<div class="modal-header" style="padding:35px 50px;">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h3><span class="fa fa-comments fa-2x"></span>&nbsp;Comments</h3>
+			</div>
+			<div class="modal-body" style="padding:40px 50px;">
+			<div class="media">
+				<div class="media-left">
+				  <img src="assets/images/about.png" class="media-object img-circle"   style="width:90px">
+				</div>
+				<div class="media-body">
+				  <h4 class="media-heading">RAYA</h4>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			 </div>
+			<hr>
+			<div class="media">
+				<div class="media-left">
+				  <img src="assets/images/course-img1.jpg" class="media-object img-circle"   style="width:90px">
+				</div>
+				<div class="media-body">
+				  <h4 class="media-heading">ALISHA</h4>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+			 <hr>
+			 <div class="media">
+				<div class="media-left">
+				  <img src="assets/images/about.png" class="media-object img-circle"   style="width:90px">
+				</div>
+				<div class="media-body">
+				  <h4 class="media-heading">SHIVAY</h4>
+				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			 </div>
+			<hr>
+			</div>
+			<div class="modal-footer">
+			  <button type="submit" class="btn btn-warning btn-default" data-dismiss="modal">Cancel</button>
+			</div>
+			</div>
+		</div>
+	</div> 
+	<!--Modal end-->
+	</body>
+</html>
